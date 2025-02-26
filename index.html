@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+	GNU GENERAL PUBLIC LICENSE
+	Version 3, 29 June 2007
+
+	Copyright (C) 2024 BlipSoft (@ilbpedro)
+	https://www.gnu.org/licenses/
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see https://www.gnu.org/licenses/.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+		<meta name="theme-color" content="#000000">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="keywords" content="free, web, app, template, blipsoft, interface, html, css, javascript, js">
+		<meta name="description" content="Free web/app template">
+		<meta name="author" content="@ilbpedro">
+		<meta name="copyright" content="© 2024 Blipsoft/@ilbpedro" />
+
+		<link rel="stylesheet" href="css/index.css">
+		<title>[BlipSoft appWebInterface]</title>
+	</head>
+	<body>
+		<div class="container">
+<!-- ----------------------------- APP HEADER ----------------------------- -->
+			<div class="header">
+				<h1>[Page/App name here]</h1>
+				<div class="hButton">
+					<button id="helpButton" class="help-btn">
+						<span id="helpbtn">?</span>
+					</button>
+				</div>
+				<div class="pButton">
+					<button id="preferencesButton" class="preferences-btn">
+						<img src="img/prefs.png" alt="Button Icon" class="prefs-ico">
+						<span id="prefbutton"></span>
+					</button>
+				</div>
+			</div>
+<!-- ----------------------------- SECTION 01 ----------------------------- -->
+			<section>
+				<h2 id="section1-header">[Section 01]</h2>
+				<div id="section1" class="section-content">
+					<div class="input-group">
+						<label for="section1-label1">[label1]</label>
+						<input type="number" id="section1-label1" step="0.1" value="100.0">
+
+						<label for="section1-label2">[label2]</label>
+						<select id="section1-label2">
+							<option value="-3">-3</option>
+							<option value="-2">-2</option>
+							<option value="-1">-1</option>
+							<option value="0">0</option>
+							<option value="1" selected>1</option> <!-- default option -->
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
+
+					<div class="input-group">
+						<p class="text">[text] <span id="section1-textspan">[ ? ]</span></p>
+					</div>
+				</div>
+			</section>
+<!-- ----------------------------- SECTION 02 ----------------------------- -->
+			<section>
+				<h2 id="section2-header">[Section 02]</h2>
+				<div id="section2" class="section-content">
+					<div class="input-group">
+						<label for="section2-label1">[label1]</label>
+						<input type="number" id="section2-label1" step="1.0" value="1000.0">
+					</div>
+
+					<div class="input-group">
+						<p class="text">[text] <span id="section2-textspan">[ ? ]</span></p>
+					</div>
+				</div>
+			</section>
+<!-- ----------------------------- SECTION 03 ----------------------------- -->
+			<section>
+				<h2 id="section3-header">[Section 03]</h2>
+				<div id="section3" class="section-content">
+					<div class="input-group">
+						<label for="section3-label2">[label2]</label>
+						<select id="section3-label2">
+							<option value="-3">-3</option>
+							<option value="-2">-2</option> <!-- default option (js)-->
+							<option value="-1">-1</option>
+							<option value="0">0</option>
+							<option value="1">1</option> 
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
+
+					<div class="input-group">
+						<p class="text">[text] <span id="section3-textspan">[ ? ]</span></p>
+					</div>
+				</div>
+			</section>
+<!-- ----------------------------- SECTION 04 ----------------------------- -->
+			<section>
+				<h2 id="section4-header">[Section 04]</h2>
+				<div id="section4" class="section-content">
+					<div class="input-group">
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span id="section4-textspan">[ ? ]</span></p>
+					</div>
+				</div>
+			</section>
+<!-- ---------------------------------------------------------------------- -->
+
+                    <!-- add other <sections> similarly -->
+
+<!-- ---------------------------- PREFERENCES ----------------------------- -->
+			<div id="preferencesModal" class="modal">
+				<div class="modal-content">
+					<span id="closeModal" class="close">&times;</span>
+					<h2>Preferences</h2>
+
+					<div class="input-group">
+						<label for="theme-select">App Theme:</label>
+						<select id="theme-select">
+							<option value="light">Light</option>
+							<option value="dark">Dark</option>
+							<option value="cblind0">Achromat</option>
+							<option value="cblind1">Protan</option>
+							<option value="cblind2">Deuteran</option>
+							<option value="cblind3">Tritan</option>
+						</select>
+					</div>
+
+					<button id="savePreferences">Save</button>
+				</div>
+			</div>
+<!-- ----------------------------- HELP/ABOUT ----------------------------- -->
+			<div id="helpModal" class="modal-help">
+				<div class="modal-content">
+					<span id="closeHelpModal" class="close">&times;</span>
+					<h2>About / Help</h2>
+
+					<div id="about-section">
+						<div class="centered-content">
+							<img id="aboutLogo" src="img/logo.png" alt="[App/page name here]">
+							<h2>[App/Page name here]</h2>
+						</div>
+
+						<p>[Short app/page description here]</p>
+						<br>
+
+						<div class="centered-content">
+							<p>Developed by:</p><br><h3>[Company name]</h3>
+						</div>
+						<br>
+
+						<!--<a href="mailto:email@email.net" id="contact-link" onclick="copyToClipboard(this); return false;"> -->
+						<p>Contact: <a href="mailto:email@email.net" id="contact-link">[email@email.net]</a></p> 
+						<br>
+
+						<h3>Support the App</h3>
+						<p>If you like this app, please consider making a donation:</p>
+						<p><a href="https://www.paypal.com/donate/?hosted_button_id=MZ8UDWFXBHXLN" target="_blank">Donate via PayPal</a>
+						<br>
+
+						<h3>Feedback</h3>
+						<p>We appreciate your feedback! Please <a href="https://play.google.com/store/apps/details?id=com.companyname.appname" id="rate-appstore">rate us in the app store.</a></p>
+
+						<div id="privacyModal" class="modalTosPriv">
+							<span class="close" id="closePrivacyModal">&times;</span>
+							<div class="modalContentTosPriv">
+								<h2>Privacy Policy</h2><br>
+								<br>
+								<pre id="privacyText">																								Ci1FZmZlY3RpdmUgRGF0ZTogMTEvMjAyNAoKWzEuIEludHJvZHVjdGlvbl0KV2VsY29tZSB0byBCbGlwU29mdCAnYXBwV2ViSW50ZXJmYWNlJy4gVGhpcyBwb2xpY3kgZXhwbGFpbnMgaG93IHdlIGNvbGxlY3QsIHVzZSwgYW5kIHByb3RlY3QgeW91ciBpbmZvcm1hdGlvbiB3aGVuIHlvdSB1c2UgdGhpcyBhcHAuCgpbMi4gSW5mb3JtYXRpb24gQ29sbGVjdGVkXQpQZXJzb25hbCBpbmZvcm1hdGlvbnMgYXJlIG5vdCBjb2xsZWN0ZWQgdW5sZXNzIHlvdSB2b2x1bnRhcmlseSBwcm92aWRlIGl0LCBzdWNoIGFzIHRocm91Z2ggYSBjb250YWN0IGZvcm0gb3IgZmVlZGJhY2sgb3B0aW9uLgoKWzMuIFNoYXJpbmcgWW91ciBJbmZvcm1hdGlvbl0KWW91ciBpbmZvcm1hdGlvbiBhcmUgbm90IHNoYXJlZCB3aXRoIHRoaXJkIHBhcnRpZXMsIGV4Y2VwdCBpbiB0aGUgZm9sbG93aW5nIGNhc2VzOgoKTGVnYWwgT2JsaWdhdGlvbnM6IFlvdXIgaW5mb3JtYXRpb24gbWF5IGJlIGRpc2Nsb3NlZCB0byBjb21wbHkgd2l0aCBsYXdzLCByZWd1bGF0aW9ucywgb3IgbGVnYWwgcHJvY2Vzc2VzLgoKU2VydmljZSBQcm92aWRlcnM6IEFub255bWl6ZWQgaW5mb3JtYXRpb24gbWF5IGJlIHNoYXJlZCB3aXRoIHRydXN0ZWQgc2VydmljZSBwcm92aWRlcnMgd2hvIGhlbHBzIG9wZXJhdGluZyB0aGUgYXBwLCBzdWNoIGFzLCBhcHAgc3RvcmUsIGFuYWx5dGljcyBvciBlcnJvciByZXBvcnRpbmcgdG9vbHMuCgpbNC4gQ2hhbmdlcyB0byBUaGlzIFByaXZhY3kgUG9saWN5XQpUaGlzIHBvbGljeSBtYXkgYmUgdXBkYXRlZCBwZXJpb2RpY2FsbHkuIEFueSBjaGFuZ2VzIHdpbGwgYmUgcG9zdGVkIGhlcmUsIGFuZCBjb250aW51ZWQgdXNlIG9mIHRoZSBhcHAgY29uc3RpdHV0ZXMgYWNjZXB0YW5jZSBvZiB0aGUgdXBkYXRlZCBwb2xpY3kuCgpbNS4gQ29udGFjdCBJbmZvcm1hdGlvbl0KRm9yIHF1ZXN0aW9ucyBvciBjb25jZXJucyByZWdhcmRpbmcgdGhpcyBwcml2YWN5IHBvbGljeSwgcGxlYXNlIGNvbnRhY3QgdXMgYXQ6CmJsaXBzb2Z0QHByb3Rvbm1haWwuY29t
+								</pre>
+							</div>
+						</div>
+
+						<div id="tosModal" class="modalTosPriv">
+							<span class="close" id="closeTosModal">&times;</span>
+							<div class="modalContentTosPriv">
+								<h2>Terms of Service</h2><br>
+								<pre id="tosText">								LUVmZmVjdGl2ZSBEYXRlOiAxMS8yMDI0CgpbMS4gQWNjZXB0YW5jZSBvZiBUZXJtc10KQnkgZG93bmxvYWRpbmcsIGFjY2Vzc2luZywgb3IgdXNpbmcgQmxpcFNvZnQgJ3dlYkFwcEludGVyZmFjZScgKHRoZSAiQXBwIiksIHlvdSBhZ3JlZSB0byBiZSBib3VuZCBieSB0aGVzZSBUZXJtcyBvZiBTZXJ2aWNlICh0aGUgIlRlcm1zIikgYW5kIG91ciBQcml2YWN5IFBvbGljeS4gSWYgeW91IGRvIG5vdCBhZ3JlZSB3aXRoIGFueSBwYXJ0IG9mIHRoZXNlIFRlcm1zLCBwbGVhc2UgZG8gbm90IHVzZSBvdXIgQXBwLgoKWzIuIERlc2NyaXB0aW9uIG9mIHRoZSBBcHBdCldlYi9BcHAgaW50ZXJmYWNlIG1hZGUgd2l0aCBIVE1MK0NTUytKYXZhc2NyaXB0CgpbMy4gUGVybWl0dGVkIFVzZXMgYW5kIFJlc3RyaWN0aW9uc10KWW91IGFncmVlIHRvIHVzZSB0aGUgQXBwIG9ubHkgZm9yIGxhd2Z1bCBwdXJwb3NlcyBhbmQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZXNlIFRlcm1zLiBZb3UgYWdyZWUgbm90IHRvOgoKLU1vZGlmeSwgZGlzdHJpYnV0ZSwgb3IgcmVwcm9kdWNlIHRoZSBBcHAgY29udGVudCBpbiBhbnkgd2F5LgoKLVVzZSB0aGUgQXBwIGZvciBhbnkgaGFybWZ1bCwgZnJhdWR1bGVudCwgb3IgaWxsZWdhbCBhY3Rpdml0eS4KCi1SZXZlcnNlIGVuZ2luZWVyLCBkZWNvbXBpbGUsIG9yIGF0dGVtcHQgdG8gZXh0cmFjdCB0aGUgc291cmNlIGNvZGUgb2YgdGhlIEFwcC4KCi1WaW9sYXRlIGFueSBhcHBsaWNhYmxlIGxvY2FsLCBzdGF0ZSwgbmF0aW9uYWwsIG9yIGludGVybmF0aW9uYWwgbGF3LgoKWzQuIEludGVsbGVjdHVhbCBQcm9wZXJ0eSBSaWdodHNdCkFsbCBjb250ZW50LCB0cmFkZW1hcmtzLCBhbmQgb3RoZXIgaW50ZWxsZWN0dWFsIHByb3BlcnR5IHJlbGF0ZWQgdG8gdGhlIEFwcCBhcmUgbGljZW5zZWQgb3Igb3duZWQgYnkgQmxpcHNvZnQuIFlvdSBtYXkgbm90IHVzZSBhbnkgdHJhZGVtYXJrcyBvciBjb3B5cmlnaHRlZCBjb250ZW50IHdpdGhvdXQgb3VyIGV4cHJlc3MgcGVybWlzc2lvbi4KCls1LiBEb25hdGlvbnNdCldlIGFwcHJlY2lhdGUgYW55IGRvbmF0aW9ucyBtYWRlIHRvIHN1cHBvcnQgdGhlIG9uZ29pbmcgZGV2ZWxvcG1lbnQgYW5kIG1haW50ZW5hbmNlIG9mIEJsaXBzb2Z0IGFwcHMuIEJ5IG1ha2luZyBhIGRvbmF0aW9uLCB5b3UgYWdyZWUgdG8gdGhlIGZvbGxvd2luZyB0ZXJtczoKCi1Wb2x1bnRhcnkgQ29udHJpYnV0aW9uOiBEb25hdGlvbnMgYXJlIGVudGlyZWx5IG9wdGlvbmFsIGFuZCBhcmUgbm90IHJlcXVpcmVkIHRvIGFjY2VzcyB0aGUgYXBwIG9yIGFueSBvZiBpdHMgZmVhdHVyZXMuIFRoZXkgYXJlIHByb3ZpZGVkIGFzIGEgd2F5IGZvciB1c2VycyB0byBzdXBwb3J0IG91ciB3b3JrIGlmIHRoZXkgY2hvb3NlLgoKLU5vbi1SZWZ1bmRhYmxlOiBBbGwgZG9uYXRpb25zIGFyZSBmaW5hbCBhbmQgbm9uLXJlZnVuZGFibGUuIE9uY2UgYSBkb25hdGlvbiBoYXMgYmVlbiBtYWRlLCBpdCBjYW5ub3QgYmUgcmV2ZXJzZWQuCgotVXNlIG9mIERvbmF0aW9uczogRG9uYXRpb25zIGFyZSB1c2VkIHRvIGZ1bmQgZnV0dXJlIGltcHJvdmVtZW50cyBhbmQgZmVhdHVyZXMsIGFuZCBjb3ZlciBvcGVyYXRpb25hbCBjb3N0cy4KCi1ObyBBZGRpdGlvbmFsIEJlbmVmaXRzOiBEb25hdGluZyBkb2VzIG5vdCBncmFudCBhbnkgYWRkaXRpb25hbCBiZW5lZml0cywgZmVhdHVyZXMsIG9yIHByaXZpbGVnZXMgd2l0aGluIHRoZSBhcHAuCgpbNi4gTGltaXRhdGlvbiBvZiBMaWFiaWxpdHldClRvIHRoZSBmdWxsZXN0IGV4dGVudCBwZXJtaXR0ZWQgYnkgbGF3LCAnTXVzaUNhbGMnIGlzIG5vdCBsaWFibGUgZm9yIGFueSBpbmRpcmVjdCwgaW5jaWRlbnRhbCwgb3IgY29uc2VxdWVudGlhbCBkYW1hZ2VzIGFyaXNpbmcgZnJvbSB5b3VyIHVzZSBvciBpbmFiaWxpdHkgdG8gdXNlIHRoZSBBcHAsIGV2ZW4gaWYgd2Ugd2VyZSBhZHZpc2VkIG9mIHRoZSBwb3NzaWJpbGl0eSBvZiBzdWNoIGRhbWFnZXMuCgpbNy4gRGlzY2xhaW1lciBvZiBXYXJyYW50aWVzXQpUaGUgQXBwIGlzIHByb3ZpZGVkICJhcyBpcyIgYW5kICJhcyBhdmFpbGFibGUiLiBBbGwgd2FycmFudGllcyBhcmUgZGlzY2xhaW1lZCwgZXhwcmVzcyBvciBpbXBsaWVkLCBpbmNsdWRpbmcgYnV0IG5vdCBsaW1pdGVkIHRvIGltcGxpZWQgd2FycmFudGllcyBvZiBtZXJjaGFudGFiaWxpdHksIGZpdG5lc3MgZm9yIGEgcGFydGljdWxhciBwdXJwb3NlLCBhbmQgbm9uLWluZnJpbmdlbWVudC4gTm9uLWd1YXJhbnRlZWQgdGhhdCB0aGUgQXBwIHdpbGwgYmUgZXJyb3ItZnJlZSwgdW5pbnRlcnJ1cHRlZCwgb3Igc2VjdXJlLgoKWzguIEdvdmVybmluZyBMYXddClRoZXNlIFRlcm1zIGFyZSBnb3Zlcm5lZCBieSB0aGUgbGF3cyBvZiBCcmF6aWwsIHdpdGhvdXQgcmVnYXJkIHRvIGl0cyBjb25mbGljdCBvZiBsYXcgcHJpbmNpcGxlcy4gWW91IGFncmVlIHRvIHN1Ym1pdCB0byB0aGUgZXhjbHVzaXZlIGp1cmlzZGljdGlvbiBvZiB0aGUgY291cnRzIGxvY2F0ZWQgaW4gQkdBLU1ULgoKWzkuIENoYW5nZXMgdG8gVGhlc2UgVGVybXNdClRoZXNlIFRlcm1zIG1heSBiZSB1cGRhdGVkIGZyb20gdGltZSB0byB0aW1lLiBBbnkgY2hhbmdlcyB3aWxsIGJlIHBvc3RlZCB3aXRoaW4gdGhlIEFwcCwgYW5kIHlvdXIgY29udGludWVkIHVzZSBvZiB0aGUgQXBwIGNvbnN0aXR1dGVzIGFjY2VwdGFuY2Ugb2YgdGhlIHVwZGF0ZWQgVGVybXMuCgpbMTAuIENvbnRhY3QgSW5mb3JtYXRpb25dCklmIHlvdSBoYXZlIGFueSBxdWVzdGlvbnMgYWJvdXQgdGhlc2UgVGVybXMsIHBsZWFzZSBjb250YWN0IEJsaXBzb2Z0IGF0OgpibGlwc29mdEBwcm90b25tYWlsLmNvbQ==
+								</pre>
+							</div>
+						</div>
+						<br>
+
+						<p><a href="javascript:void(0);" id="openPrivacyModal">Read app's Privacy Policy</a></p>
+						<p><a href="javascript:void(0);" id="openTosModal">View Terms of Service</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- --------------------------------- END -------------------------------- -->
+		<script src="js/index.js"></script>
+	</body>
+</html>
