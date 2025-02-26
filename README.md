@@ -1,1 +1,1 @@
-This project is a user interface for an application based on interactive sections. The HTML code defines a modular structure with a header and four distinct sections, each containing interactive elements such as buttons, input fields, and dropdown menus.
+This project is a user interface for an application based on interactive sections.
